@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إسلام كار | تسويق ووساطة واستيراد السيارات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#F57C00;
+    --orange-dark:#D96500;
+    --black:#121212;
+    --white:#FFFFFF;
+    --gray-50:#FAFAF9;
+    --gray-100:#F1EFEC;
+    --gray-500:#6B6660;
+    --gray-700:#3A3733;
+    --radius-lg:22px;
+    --radius-md:14px;
+    --shadow-soft:0 10px 30px rgba(18,18,18,0.08);
+    --shadow-hover:0 16px 40px rgba(245,124,0,0.22);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Tajawal', sans-serif;
+    color:var(--gray-700);
+    background:var(--white);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Cairo', sans-serif;
+    color:var(--black);
+    line-height:1.35;
+  }
+
+  img{max-width:100%; display:block;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  section{padding:88px 0;}
+
+  .eyebrow{
+    display:inline-block;
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.5px;
+    color:var(--orange);
+    background:rgba(245,124,0,0.10);
+    padding:8px 18px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+
+  .section-head{
+    max-width:640px;
+    margin:0 auto 56px;
+    text-align:center;
+  }
+
+  .section-head h2{
+    font-size:clamp(26px,4vw,38px);
+    font-weight:800;
+    margin-bottom:14px;
+  }
+
+  .section-head p{
+    color:var(--gray-500);
+    font-size:17px;
+  }
+
+  /* ===== Buttons ===== */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    padding:16px 34px;
+    border-radius:999px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+  }
+  .btn-primary{
+    background:var(--orange);
+    color:var(--white);
+    box-shadow:0 10px 24px rgba(245,124,0,0.35);
+  }
+  .btn-primary:hover{
+    background:var(--orange-dark);
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-hover);
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--white);
+    border-color:rgba(255,255,255,0.55);
+  }
+  .btn-outline:hover{
+    background:var(--white);
+    color:var(--black);
+    transform:translateY(-3px);
+  }
+  .btn-whatsapp{
+    background:#1EAD52;
+    color:var(--white);
+    box-shadow:0 10px 24px rgba(30,173,82,0.35);
+  }
+  .btn-whatsapp:hover{
+    background:#178c42;
+    transform:translateY(-3px);
+  }
+  .btn-dark{
+    background:var(--black);
+    color:var(--white);
+  }
+  .btn-dark:hover{
+    background:var(--orange);
+    transform:translateY(-3px);
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--gray-100);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 24px;
+    max-width:1180px;
+    margin:0 auto;
+  }
+  .logo{
+    font-family:'Cairo', sans-serif;
+    font-weight:900;
+    font-size:24px;
+    color:var(--black);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .logo span{color:var(--orange);}
+  .nav-links{
+    display:flex;
+    gap:32px;
+    font-family:'Cairo', sans-serif;
+    font-weight:600;
+    font-size:15px;
+  }
+  .nav-links a{
+    color:var(--gray-700);
+    transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--orange);}
+  .nav-cta{display:flex; gap:12px;}
+  .nav-cta .btn{padding:10px 22px; font-size:14px;}
+  .nav-cta .btn-primary{color:var(--white);}
+  .nav-cta .btn-outline{color:var(--gray-700); border-color:var(--gray-100);}
+  .nav-cta .btn-outline:hover{background:var(--black); color:var(--white); border-color:var(--black);}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(105deg, rgba(18,18,18,0.92) 20%, rgba(18,18,18,0.55) 60%, rgba(18,18,18,0.25) 100%),
+      url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color:var(--white);
+    padding:150px 0 120px;
+  }
+  .hero-inner{
+    max-width:680px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(32px,5vw,54px);
+    font-weight:900;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--orange);
+  }
+  .hero p{
+    font-size:18px;
+    color:rgba(255,255,255,0.85);
+    margin-bottom:38px;
+    max-width:560px;
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .hero-stats{
+    display:flex;
+    gap:40px;
+    margin-top:64px;
+    flex-wrap:wrap;
+  }
+  .hero-stats div{
+    border-right:2px solid rgba(245,124,0,0.6);
+    padding-right:18px;
+  }
+  .hero-stats strong{
+    display:block;
+    font-family:'Cairo', sans-serif;
+    font-size:26px;
+    font-weight:800;
+    color:var(--white);
+  }
+  .hero-stats span{
+    font-size:13px;
+    color:rgba(255,255,255,0.7);
+  }
+
+  /* ===== Why us cards ===== */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .why-card{
+    background:var(--gray-50);
+    border:1px solid var(--gray-100);
+    border-radius:var(--radius-lg);
+    padding:34px 28px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .why-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow-soft);
+    border-color:rgba(245,124,0,0.35);
+  }
+  .why-icon{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    background:var(--orange);
+    color:var(--white);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:20px;
+  }
+  .why-card h3{
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .why-card p{
+    color:var(--gray-500);
+    font-size:15px;
+  }
+
+  /* ===== Services ===== */
+  .services{background:var(--black);}
+  .services .section-head h2, .services .section-head p{color:var(--white);}
+  .services .section-head p{color:rgba(255,255,255,0.6);}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+  }
+  .service-card{
+    background:#1B1B1B;
+    border:1px solid #2A2A2A;
+    border-radius:var(--radius-lg);
+    padding:32px 26px;
+    transition:transform .3s ease, background .3s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-8px);
+    background:linear-gradient(160deg,#1B1B1B, #241A0E);
+    border-color:var(--orange);
+  }
+  .service-num{
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    color:var(--orange);
+    font-size:14px;
+    margin-bottom:16px;
+    display:block;
+  }
+  .service-card h3{
+    color:var(--white);
+    font-size:19px;
+    margin-bottom:10px;
+  }
+  .service-card p{
+    color:rgba(255,255,255,0.6);
+    font-size:14.5px;
+  }
+
+  /* ===== Process ===== */
+  .process-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+  }
+  .process-col h3{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:28px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .process-col h3::before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:var(--orange);
+    border-radius:50%;
+    display:inline-block;
+  }
+  .timeline{
+    position:relative;
+    padding-right:28px;
+    border-right:2px dashed var(--gray-100);
+  }
+  .timeline li{
+    position:relative;
+    padding-bottom:26px;
+    padding-right:20px;
+  }
+  .timeline li:last-child{padding-bottom:0;}
+  .timeline li::before{
+    content:attr(data-step);
+    position:absolute;
+    right:-38px;
+    top:0;
+    width:28px;
+    height:28px;
+    background:var(--orange);
+    color:var(--white);
+    border-radius:50%;
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .timeline li strong{
+    display:block;
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    color:var(--black);
+    font-size:15.5px;
+  }
+
+  /* ===== Cars grid ===== */
+  .cars{background:var(--gray-50);}
+  .cars-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .car-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .car-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(18,18,18,0.14);
+  }
+  .car-photo{
+    height:190px;
+    overflow:hidden;
+  }
+  .car-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .4s ease;
+  }
+  .car-card:hover .car-photo img{transform:scale(1.06);}
+  .car-body{padding:22px 22px 26px;}
+  .car-body h3{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .car-meta{
+    display:flex;
+    gap:10px;
+    color:var(--gray-500);
+    font-size:13.5px;
+    margin-bottom:14px;
+  }
+  .car-meta span::after{content:"•"; margin-right:10px; color:var(--gray-100);}
+  .car-meta span:last-child::after{content:"";}
+  .car-price{
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    color:var(--orange);
+    font-size:20px;
+    margin-bottom:18px;
+  }
+  .car-price small{
+    font-family:'Tajawal', sans-serif;
+    font-weight:400;
+    color:var(--gray-500);
+    font-size:13px;
+  }
+  .car-body .btn{
+    width:100%;
+    padding:12px;
+    font-size:14px;
+  }
+  .car-body .btn-dark{color:var(--white);}
+
+  /* ===== Testimonials ===== */
+  .testi-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .testi-card{
+    background:var(--gray-50);
+    border:1px solid var(--gray-100);
+    border-radius:var(--radius-lg);
+    padding:32px 28px;
+  }
+  .stars{color:var(--orange); font-size:16px; margin-bottom:16px; letter-spacing:2px;}
+  .testi-card p{
+    font-size:15.5px;
+    color:var(--gray-700);
+    margin-bottom:24px;
+  }
+  .testi-user{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .testi-user img{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    object-fit:cover;
+  }
+  .testi-user strong{
+    font-family:'Cairo', sans-serif;
+    font-size:15px;
+    display:block;
+  }
+  .testi-user span{
+    font-size:12.5px;
+    color:var(--gray-500);
+  }
+
+  /* ===== FAQ ===== */
+  .faq{max-width:800px; margin:0 auto;}
+  .faq-item{
+    background:var(--gray-50);
+    border:1px solid var(--gray-100);
+    border-radius:var(--radius-md);
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:20px 24px;
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    color:var(--black);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    font-size:22px;
+    color:var(--orange);
+    font-weight:400;
+    transition:transform .25s ease;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item .faq-answer{
+    padding:0 24px 20px;
+    color:var(--gray-500);
+    font-size:15px;
+  }
+
+  /* ===== Contact ===== */
+  .contact{background:var(--black);}
+  .contact-wrap{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:start;
+  }
+  .contact-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    padding:36px;
+  }
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-family:'Cairo', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    margin-bottom:8px;
+    color:var(--black);
+  }
+  .field input, .field select, .field textarea{
+    width:100%;
+    padding:14px 16px;
+    border-radius:10px;
+    border:1.5px solid var(--gray-100);
+    font-family:'Tajawal', sans-serif;
+    font-size:15px;
+    background:var(--gray-50);
+    color:var(--gray-700);
+  }
+  .field textarea{resize:vertical; min-height:100px;}
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;
+    border-color:var(--orange);
+    background:var(--white);
+  }
+  .contact-card .btn{width:100%; padding:16px; color:var(--white);}
+
+  .contact-side{
+    color:var(--white);
+    padding-top:10px;
+  }
+  .contact-side h2{color:var(--white); font-size:30px; margin-bottom:16px;}
+  .contact-side p{color:rgba(255,255,255,0.65); margin-bottom:34px; font-size:16px;}
+  .contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-bottom:34px;
+  }
+  .contact-info li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:rgba(255,255,255,0.85);
+    font-size:15px;
+  }
+  .contact-info .ic{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:rgba(245,124,0,0.15);
+    color:var(--orange);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    flex-shrink:0;
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    background:#0B0B0B;
+    color:rgba(255,255,255,0.65);
+    padding:46px 0 28px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:22px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    margin-bottom:22px;
+  }
+  .footer-logo{
+    font-family:'Cairo', sans-serif;
+    font-weight:900;
+    font-size:22px;
+    color:var(--white);
+  }
+  .footer-logo span{color:var(--orange);}
+  .social-icons{display:flex; gap:12px;}
+  .social-icons a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.06);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    color:var(--white);
+    transition:background .25s ease, transform .25s ease;
+  }
+  .social-icons a:hover{
+    background:var(--orange);
+    transform:translateY(-4px);
+  }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:13px;
+  }
+
+  /* ===== Floating WhatsApp ===== */
+  .float-whatsapp{
+    position:fixed;
+    bottom:26px;
+    left:26px;
+    z-index:60;
+    background:#1EAD52;
+    color:var(--white);
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 10px 26px rgba(30,173,82,0.45);
+    transition:transform .25s ease;
+  }
+  .float-whatsapp:hover{transform:scale(1.08);}
+
+  /* ===== Responsive ===== */
+  @media (max-width:960px){
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .cars-grid{grid-template-columns:repeat(2,1fr);}
+    .testi-grid{grid-template-columns:1fr;}
+    .process-wrap{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:640px){
+    section{padding:64px 0;}
+    .hero{padding:120px 0 80px; text-align:center;}
+    .hero-inner{margin:0 auto;}
+    .hero-actions{justify-content:center;}
+    .hero-stats{justify-content:center;}
+    .why-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:1fr;}
+    .cars-grid{grid-template-columns:1fr;}
+    .nav-cta .btn:first-child{display:none;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="nav">
+    <div class="logo">إسلام <span>كار</span></div>
+    <nav class="nav-links">
+      <a href="#cars">السيارات</a>
+      <a href="#services">الخدمات</a>
+      <a href="#process">كيف نعمل</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline">تواصل معنا</a>
+      <a href="https://wa.me/249000000000" class="btn btn-primary">واتساب</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>بتدور على عربية؟ أو عاوز تبيع <em>عربيتك</em>؟<br>إحنا بنسهل عليك الطريق.</h1>
+    <p>نساعدك في شراء أو بيع السيارات داخل السودان، بالإضافة إلى خدمة استيراد السيارات من السعودية حسب الطلب، مع متابعة احترافية حتى اكتمال العملية.</p>
+    <div class="hero-actions">
+      <a href="#cars" class="btn btn-primary">تصفح السيارات</a>
+      <a href="https://wa.me/249000000000" class="btn btn-outline">تواصل عبر واتساب</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>+500</strong><span>سيارة تم بيعها</span></div>
+      <div><strong>+300</strong><span>عميل راضٍ</span></div>
+      <div><strong>SA ← SD</strong><span>استيراد حسب الطلب</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why Us ===== -->
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">لماذا إسلام كار</span>
+      <h2>خبرة تثق بها في كل خطوة</h2>
+      <p>نجمع بين السرعة والاحترافية والمصداقية لنجعل تجربة بيع وشراء السيارات أسهل ما يمكن.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>سرعة في الخدمة</h3>
+        <p>نتعامل مع طلبك فور استلامه دون تأخير أو تعقيد.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚘</div>
+        <h3>سيارات متنوعة</h3>
+        <p>مجموعة واسعة من السيارات تناسب مختلف الاحتياجات والميزانيات.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>متابعة حتى البيع</h3>
+        <p>نرافقك من أول خطوة وحتى إتمام عملية البيع أو الشراء بنجاح.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛃</div>
+        <h3>خدمة استيراد حسب الطلب</h3>
+        <p>نستورد لك السيارة التي تريدها من السعودية بمواصفات دقيقة.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📣</div>
+        <h3>تسويق احترافي</h3>
+        <p>إعلانات مصممة بعناية تصل لأكبر عدد من المشترين الجادين.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⏱</div>
+        <h3>توفير الوقت والجهد</h3>
+        <p>نتولى كل التفاصيل نيابة عنك من البداية حتى النهاية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>كل ما تحتاجه في مكان واحد</h2>
+      <p>من التسويق إلى الوساطة والاستيراد، نغطي رحلتك كاملة مع السيارات.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <h3>تسويق السيارات</h3>
+        <p>نقوم بتسويق سيارتك عبر منصات التواصل للوصول إلى أكبر عدد من المشترين.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <h3>شراء سيارة</h3>
+        <p>نوفر سيارات متنوعة تناسب جميع الميزانيات.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <h3>الوساطة</h3>
+        <p>ننسق بين البائع والمشتري حتى إتمام البيع.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <h3>الاستيراد من السعودية</h3>
+        <p>نوفر خدمة استيراد السيارات حسب الطلب مع متابعة الإجراءات.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">خطوات العمل</span>
+      <h2>طريقك للبيع أو الشراء واضح وبسيط</h2>
+    </div>
+    <div class="process-wrap">
+      <div class="process-col">
+        <h3>خطوات المشتري</h3>
+        <ul class="timeline">
+          <li data-step="1"><strong>اختر السيارة</strong><span>تصفح قائمة السيارات المتاحة لدينا.</span></li>
+          <li data-step="2"><strong>تواصل معنا</strong><span>راسلنا عبر واتساب أو النموذج أدناه.</span></li>
+          <li data-step="3"><strong>حدد موعد المعاينة</strong><span>نرتب لك موعد لمعاينة السيارة عن قرب.</span></li>
+          <li data-step="4"><strong>أكمل عملية الشراء</strong><span>ننهي الإجراءات معك حتى تصبح السيارة ملكك.</span></li>
+        </ul>
+      </div>
+      <div class="process-col">
+        <h3>خطوات البائع</h3>
+        <ul class="timeline">
+          <li data-step="1"><strong>أرسل بيانات السيارة</strong><span>شاركنا صور وتفاصيل سيارتك.</span></li>
+          <li data-step="2"><strong>نصمم إعلان احترافي</strong><span>نجهز إعلاناً جذاباً يبرز مميزات سيارتك.</span></li>
+          <li data-step="3"><strong>ننشر الإعلان</strong><span>ننشر السيارة على منصاتنا المختلفة.</span></li>
+          <li data-step="4"><strong>نستقبل العملاء</strong><span>نتلقى استفسارات وطلبات المعاينة من المهتمين.</span></li>
+          <li data-step="5"><strong>نساعد حتى البيع</strong><span>نرافقك حتى إتمام عملية البيع بنجاح.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cars ===== -->
+<section id="cars" class="cars">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">السيارات المتاحة</span>
+      <h2>تصفح أحدث عروضنا</h2>
+      <p>بيانات تجريبية — يمكن استبدالها بسياراتكم الفعلية لاحقًا.</p>
+    </div>
+    <div class="cars-grid">
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" alt="تويوتا كامري"></div>
+        <div class="car-body">
+          <h3>تويوتا كامري</h3>
+          <div class="car-meta"><span>موديل 2021</span><span>الخرطوم</span></div>
+          <div class="car-price">25,000,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop" alt="هيونداي إلنترا"></div>
+        <div class="car-body">
+          <h3>هيونداي إلنترا</h3>
+          <div class="car-meta"><span>موديل 2020</span><span>أم درمان</span></div>
+          <div class="car-price">18,500,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800&auto=format&fit=crop" alt="لكزس ES"></div>
+        <div class="car-body">
+          <h3>لكزس ES 350</h3>
+          <div class="car-meta"><span>موديل 2022</span><span>بحري</span></div>
+          <div class="car-price">42,000,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" alt="نيسان صني"></div>
+        <div class="car-body">
+          <h3>نيسان صني</h3>
+          <div class="car-meta"><span>موديل 2019</span><span>الخرطوم بحري</span></div>
+          <div class="car-price">14,200,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=800&auto=format&fit=crop" alt="كيا سيراتو"></div>
+        <div class="car-body">
+          <h3>كيا سيراتو</h3>
+          <div class="car-meta"><span>موديل 2021</span><span>الخرطوم</span></div>
+          <div class="car-price">19,800,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-photo"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop" alt="تويوتا لاندكروزر"></div>
+        <div class="car-body">
+          <h3>تويوتا لاندكروزر</h3>
+          <div class="car-meta"><span>موديل 2023</span><span>مستوردة حسب الطلب</span></div>
+          <div class="car-price">95,000,000 <small>جنيه سوداني</small></div>
+          <a href="#contact" class="btn btn-dark">عرض التفاصيل</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">آراء العملاء</span>
+      <h2>ثقتكم سر استمرارنا</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>تعاملت مع إسلام كار لبيع سيارتي، والنتيجة فاقت توقعاتي من حيث السرعة والمتابعة المستمرة.</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&auto=format&fit=crop" alt="صورة العميل">
+          <div><strong>محمد الأمين</strong><span>الخرطوم</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>خدمة استيراد السيارة من السعودية كانت سلسة جداً، وتم إنجاز كل الإجراءات بمهنية عالية.</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="صورة العميل">
+          <div><strong>سارة عبدالله</strong><span>أم درمان</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>فريق محترف ومتعاون، ساعدوني في إيجاد السيارة المناسبة لميزانيتي بسرعة قياسية.</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="صورة العميل">
+          <div><strong>عثمان الطيب</strong><span>بحري</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" style="background:var(--gray-50);">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">الأسئلة الشائعة</span>
+      <h2>عندك سؤال؟ إليك الإجابة</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item" open>
+        <summary>هل أنتم معرض سيارات؟</summary>
+        <div class="faq-answer">لسنا معرضاً تقليدياً، بل وكالة متخصصة في التسويق والوساطة لبيع وشراء السيارات، إضافة إلى خدمة الاستيراد حسب الطلب.</div>
+      </details>
+      <details class="faq-item">
+        <summary>هل توجد عمولة؟</summary>
+        <div class="faq-answer">نعم، نتقاضى عمولة بسيطة مقابل خدمات التسويق والوساطة، ويتم توضيح التفاصيل عند التواصل معنا مباشرة.</div>
+      </details>
+      <details class="faq-item">
+        <summary>كيف أعرض سيارتي؟</summary>
+        <div class="faq-answer">يمكنك التواصل معنا عبر واتساب أو تعبئة نموذج التواصل وإرسال بيانات وصور سيارتك، وسنتولى الباقي.</div>
+      </details>
+      <details class="faq-item">
+        <summary>هل يوجد استيراد من السعودية؟</summary>
+        <div class="faq-answer">نعم، نوفر خدمة استيراد السيارات من السعودية حسب مواصفات وطلب العميل، مع متابعة كامل الإجراءات حتى الوصول.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="contact">
+  <div class="container contact-wrap">
+
+    <div class="contact-side">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>جاهزون لمساعدتك الآن</h2>
+      <p>راسلنا وسنعاود التواصل معك في أقرب وقت، أو تحدث معنا مباشرة عبر واتساب.</p>
+      <ul class="contact-info">
+        <li><span class="ic">📍</span> الخرطوم، السودان</li>
+        <li><span class="ic">📞</span> 249 00 000 0000+</li>
+        <li><span class="ic">✉️</span> info@islamcar.example</li>
+      </ul>
+      <a href="https://wa.me/249000000000" class="btn btn-whatsapp">التواصل عبر واتساب</a>
+    </div>
+
+    <div class="contact-card">
+      <form action="#" method="post">
+        <div class="field">
+          <label for="name">الاسم</label>
+          <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل">
+        </div>
+        <div class="field">
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" placeholder="09xxxxxxxx">
+        </div>
+        <div class="field">
+          <label for="service">نوع الخدمة المطلوبة</label>
+          <select id="service" name="service">
+            <option>بيع سيارة</option>
+            <option>شراء سيارة</option>
+            <option>استيراد من السعودية</option>
+            <option>استفسار عام</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">ملاحظات</label>
+          <textarea id="notes" name="notes" placeholder="أضف تفاصيل إضافية..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">إسلام <span>كار</span></div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="TikTok">tt</a>
+        <a href="https://wa.me/249000000000" aria-label="WhatsApp">wa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 إسلام كار — جميع الحقوق محفوظة.</span>
+      <span>تسويق ووساطة واستيراد السيارات في السودان</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/249000000000" class="float-whatsapp" aria-label="تواصل عبر واتساب">💬</a>
+
+</body>
+</html>
